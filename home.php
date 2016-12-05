@@ -25,7 +25,7 @@
 			$season = "zomer";
 		}
 		elseif ($fakedate >= mktime(0, 0, 0, 10, 21, $fakeyear) && $fakedate < mktime(0, 0, 0, 12, 21, $fakeyear)){
-			$season = "herfts";
+			$season = "herfst";
 		}
 
 		$winter = $fakedate >= mktime(0, 0, 0, 12, 21, $fakeyear) && $fakedate < mktime(0, 0, 0, 3, 21, $fakeyear + 1) || $fakedate < mktime(0, 0, 0, 3, 21, $fakeyear) ;
