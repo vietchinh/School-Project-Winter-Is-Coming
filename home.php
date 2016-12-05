@@ -9,9 +9,6 @@
 	</head>
 	<body>
 	<?php
-	require_once("array/array.php");
-			print_r($seasons);
-			echo date("j m") . "<br />";
 	/* Debugging Area
 	$fakeyear = date("Y", mktime(0, 0, 0, 1,  1, 2016));
 	$fakedate = mktime(0, 0, 0, 12, 21, $fakeyear);
@@ -37,16 +34,25 @@
 		echo $season; */
 	?>
 
-	<div class="title">
-		<h1>Autumn passes and one remembers one's reverence<h1>
-	</div>
-	<div class="col-1">
-	</div>
-	<div class="col-2">
-	</div>
-	<div class="col-3">
-	</div>
-	<div class="col-4">
-	</div>
+		<div class="title">
+			<h1>Autumn passes and one remembers one's reverence</h1>
+		</div>
+		<div class="col">
+			<button class="box">
+			</button>
+		</div>
+		<div class="col">
+			<button class="box">
+			</button>
+		</div>
+		<div class="col">
+			<button class="box">
+
+			</button>
+		</div>
+		<div class="col">
+			<button class="box">
+			</button>
+		</div>
 	</body>
 </html>
