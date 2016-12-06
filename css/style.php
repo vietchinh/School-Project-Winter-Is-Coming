@@ -4,20 +4,30 @@
 		"winter" => array ("globalcolor"=>"b4e4ff", "darkerglobalcolor"=>"69aad1"),
 		"autumn" => array ("globalcolor"=>"e3cda1", "headercolor"=>"cdad92", "paragraphcolor"=>"755230")
 	);
-	$currenttime = time();
-		if ($currenttime >= mktime(0, 0, 0, 12, 21, 0) || $currenttime < mktime(0, 0, 0, 3, 21, 0)) {
-			$season = "winter";
+	$currentyear = date("Y");
+	$currentdate = time();
+	function currentyearplusone($currentdate, $currentyear){
+		if ($currentdate == mktime(0,0,0,12,21,$currentyear)){
+			$currentyearplusone = $currentyear + 1;
+			return $currentyearplusone;
 		}
-		elseif ($currenttime >= mktime(0, 0, 0, 3, 21, 0) && $currenttime < mktime(0, 0, 0, 6, 21, 0)){
-			$season = "spring";
-		}	
-		elseif ($currenttime >= mktime(0, 0, 0, 6, 21, 0) && $currenttime < mktime(0, 0, 0, 10, 21, 0)){
-			$season = "summer";
+		else {
+			return $currentyear;
 		}
-		elseif ($currenttime >= mktime(0, 0, 0, 10, 21, 0) && $currenttime < mktime(0, 0, 0, 12, 21, 0)){
-			$season = "autumn";
-		}
-
+	}
+	$fakeyearplusone = currentyearplusone($currentyear, $currentyear);
+	if ($currentdate>= mktime(0, 0, 0, 12, 21, $currentyear) || $currentdate < mktime(0, 0, 0, 3, 21, $currentyear)) {
+		$season = "winter";
+	}
+	elseif ($currentdate >= mktime(0, 0, 0, 3, 21, $currentyear) && $currentdate < mktime(0, 0, 0, 6, 21, $currentyear)){
+		$season = "spring";
+	}	
+	elseif ($currentdate >= mktime(0, 0, 0, 6, 21, $currentyear) && $currentdate < mktime(0, 0, 0, 10, 21, $currentyear)){
+		$season = "summer";
+	}
+	elseif ($currentdate>= mktime(0, 0, 0, 10, 21, $currentyear) && $currentdate < mktime(0, 0, 0, 12, 21, $currentyear)){
+		$season = "autumn";
+	}
 ?>
 body {
 	background: url("../../Website Images/<?php echo $season; ?>.jpg") no-repeat fixed;
