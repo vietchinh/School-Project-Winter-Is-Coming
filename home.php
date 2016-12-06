@@ -9,25 +9,26 @@
 		<title> WINTER IS COMING </title>
 	</head>
 	<body>
-		<div class="title">
-			<h1>Summer passes and one remembers one's exuberance</h1>
-			<h5>- Yoko Ono</h5>
-		</div>
-		<div class="col">
-			<button class="box">
+		<div id="homepage">
+			<div class="title">
+				<h1>Summer passes and one remembers one's exuberance</h1>
+				<h5>- Yoko Ono</h5>
+			</div>
+			<button>
+				<h1> HTML/CSS </h1>
+				<img src="../Website Images/html.jpg">
 			</button>
-		</div>
-		<div class="col">
-			<button class="box">
+			<button>
+				<h1> Javascript </h1>
+				<img src="../Website Images/javascript.png">
 			</button>
-		</div>
-		<div class="col">
-			<button class="box">
-
+			<button>
+				<h1> PHP </h1>
+				<img src="../Website Images/php.jpg">
 			</button>
-		</div>
-		<div class="col">
-			<button class="box">
+			<button>
+				<h1> Making Of This website </h1>
+				<img src="../Website Images/html.jpg">
 			</button>
 		</div>
 	</body>
