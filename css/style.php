@@ -8,8 +8,7 @@
 	$currentdate = time();
 	function currentyearplusone($currentdate, $currentyear){
 		if ($currentdate == mktime(0,0,0,12,21,$currentyear)){
-			$currentyearplusone = $currentyear + 1;
-			return $currentyearplusone;
+			return $currentyear+1;
 		}
 		else {
 			return $currentyear;

@@ -1,11 +1,10 @@
 <?php
 	/* Debugging Area*/
 	$fakeyear = date("Y", mktime(0, 0, 0, 1, 1, 2016));
-	$fakedate = mktime(0, 0, 0, 1, 1, $fakeyear);
+	$fakedate = mktime(0, 0, 0, 12, 21, $fakeyear);
 	function currentyearplusone($fakedate, $fakeyear){
 		if ($fakedate == mktime(0,0,0,12,21,$fakeyear)){
-			$fakeyearplusone = $fakeyear + 1;
-			return $fakeyearplusone;
+			return $fakeyear+1;
 		}
 		else {
 			return $fakeyear;
