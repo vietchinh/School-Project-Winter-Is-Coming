@@ -10,7 +10,8 @@
 	</head>
 	<body>
 		<div class="title">
-			<h1>Autumn passes and one remembers one's reverence</h1>
+			<h1>Summer passes and one remembers one's exuberance</h1>
+			<h5>- Yoko Ono</h5>
 		</div>
 		<div class="col">
 			<button class="box">
