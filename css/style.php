@@ -6,16 +6,7 @@
 	);
 	$currentyear = date("Y");
 	$currentdate = time();
-	function currentyearplusone($currentdate, $currentyear){
-		if ($currentdate == mktime(0,0,0,12,21,$currentyear)){
-			return $currentyear+1;
-		}
-		else {
-			return $currentyear;
-		}
-	}
-	$fakeyearplusone = currentyearplusone($currentyear, $currentyear);
-	if ($currentdate>= mktime(0, 0, 0, 12, 21, $currentyear) || $currentdate < mktime(0, 0, 0, 3, 21, $currentyear)) {
+	if ($currentdate>= mktime(0, 0, 0, 12, 21, $currentyear) && $currentdate < mktime(0, 0, 0, 3, 21, $currentyear + 1) || $currentdate < mktime(0, 0, 0, 3, 21, $currentyear)) {
 		$season = "winter";
 	}
 	elseif ($currentdate >= mktime(0, 0, 0, 3, 21, $currentyear) && $currentdate < mktime(0, 0, 0, 6, 21, $currentyear)){
@@ -40,7 +31,7 @@ button {
 }
 .col {
 	width: 25vh;
-	margin: 109px;
+	margin: 96px;
 }
 .title {
 	text-align: center;
