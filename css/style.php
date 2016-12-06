@@ -4,19 +4,17 @@
 		"winter" => array ("globalcolor"=>"b4e4ff", "darkerglobalcolor"=>"69aad1"),
 		"autumn" => array ("globalcolor"=>"e3cda1", "headercolor"=>"cdad92", "paragraphcolor"=>"755230")
 	);
-
 	$currenttime = time();
-	$currentyear = date("Y");
-		if ($currenttime >= mktime(0, 0, 0, 12, 21, $currentyear ) || $currenttime < mktime(0, 0, 0, 3, 21, $currentyear)) {
+		if ($currenttime >= mktime(0, 0, 0, 12, 21, 0) || $currenttime < mktime(0, 0, 0, 3, 21, 0)) {
 			$season = "winter";
 		}
-		elseif ($currenttime >= mktime(0, 0, 0, 3, 21, date("Y") ) && $currenttime < mktime(0, 0, 0, 6, 21, $currentyear)){
+		elseif ($currenttime >= mktime(0, 0, 0, 3, 21, 0) && $currenttime < mktime(0, 0, 0, 6, 21, 0)){
 			$season = "spring";
 		}	
-		elseif ($currenttime >= mktime(0, 0, 0, 6, 21, date("Y") ) && $currenttime < mktime(0, 0, 0, 10, 21, $currentyear)){
+		elseif ($currenttime >= mktime(0, 0, 0, 6, 21, 0) && $currenttime < mktime(0, 0, 0, 10, 21, 0)){
 			$season = "summer";
 		}
-		elseif ($currenttime >= mktime(0, 0, 0, 10, 21, date("Y") ) && $currenttime < mktime(0, 0, 0, 12, 21, $currentyear)){
+		elseif ($currenttime >= mktime(0, 0, 0, 10, 21, 0) && $currenttime < mktime(0, 0, 0, 12, 21, 0)){
 			$season = "autumn";
 		}
 
