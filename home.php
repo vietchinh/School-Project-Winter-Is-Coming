@@ -14,19 +14,19 @@
 				<h1>Summer passes and one remembers one's exuberance</h1>
 				<h5>- Yoko Ono</h5>
 			</div>
-			<button>
+			<button onclick="htmlcss();">
 				<h1> HTML/CSS </h1>
 				<img src="../Website Images/html.jpg">
-			</button>
-			<button>
+			</button >
+			<button onclick="javascript();">
 				<h1> Javascript </h1>
 				<img src="../Website Images/javascript.png">
 			</button>
-			<button>
+			<button onclick="php();">
 				<h1> PHP </h1>
 				<img src="../Website Images/php.jpg">
 			</button>
-			<button>
+			<button onclick="making();">
 				<h1> Making Of This website </h1>
 				<img src="../Website Images/html.jpg">
 			</button>
