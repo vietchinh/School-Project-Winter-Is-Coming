@@ -1,22 +1,7 @@
 <?php
     header("Content-type: text/css; charset: UTF-8");
-	$seasons = array (
-		"winter" => array ("globalcolor"=>"b4e4ff", "darkerglobalcolor"=>"69aad1"),
-		"autumn" => array ("globalcolor"=>"227,205,161", "headercolor"=>"205,173,146", "paragraphcolor"=>"112,82,48")
-	);
-	$currentdate = time();
-	if ($currentdate >= mktime(0, 0, 0, 3, 21, date("Y") ) && $currentdate < mktime(0, 0, 0, 6, 21, date("Y") )){
-		$season = "spring";
-	}	
-	elseif ($currentdate >= mktime(0, 0, 0, 6, 21, date("Y") ) && $currentdate < mktime(0, 0, 0, 10, 21, date("Y"))){
-		$season = "summer";
-	}
-	elseif ($currentdate >= mktime(0, 0, 0, 10, 21, date("Y") ) && $currentdate < mktime(0, 0, 0, 12, 21, date("Y") )){
-		$season = "autumn";
-	}
-	else {
-		$season = "winter";
-	}
+	require_once "../seasonpicker/seasonpicker.php";
+	require_once "../array/array.php";
 ?>
 /* source http://stackoverflow.com/questions/19166838/css-de-blur-an-image-while-fading-it-in */
 @keyframes fadeinblur {
@@ -33,7 +18,7 @@ body {
 	font-family: 'Raleway', sans-serif;
 	margin: auto;
 	position: fixed;
-	background-color: rgb(<?php echo $seasons[$season]["globalcolor"]; ?>);
+	background-color: rgb(<?php echo $seasons[$season]["backgroundcolor"]; ?>);
 }
 h1, h2, h3, h4, h5, h6 {
 	color: rgb(<?php echo $seasons[$season]["headercolor"]; ?>);
@@ -71,7 +56,7 @@ p {
 	position: relative;
 	display: none;
 	/* Source: http://stackoverflow.com/questions/4062001/css3-border-opacity */
-	border: 5px solid rgba(<?php echo $seasons[$season]["globalcolor"]; ?>,0.4);
+	border: 5px solid rgba(<?php echo $seasons[$season]["backgroundcolor"]; ?>,0.4);
 	/* End Source */
 	border-radius: 10px;
 	outline: none;

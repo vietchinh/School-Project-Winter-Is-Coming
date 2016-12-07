@@ -7,11 +7,12 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="javascript/Javascript.js"></script>
 		<title> WINTER IS COMING </title>
+		<?php require_once "seasonpicker/seasonpicker.php"; require_once "array/array.php" ?>
 	</head>
 	<body onload="onload();">
 		<div id="homepage">
 			<div class="title">
-				<h1>Summer passes and one remembers one's exuberance</h1>
+				<h1><?php echo $seasons[$season]["headertext"] ?></h1>
 				<h5>- Yoko Ono</h5>
 			</div>
 			<button onclick="htmlcss();">
