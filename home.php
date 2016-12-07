@@ -8,7 +8,7 @@
 		<script src="javascript/Javascript.js"></script>
 		<title> WINTER IS COMING </title>
 	</head>
-	<body>
+	<body onload="onload();">
 		<div id="homepage">
 			<div class="title">
 				<h1>Summer passes and one remembers one's exuberance</h1>
@@ -27,7 +27,7 @@
 				<img src="../Website Images/php.jpg">
 			</button>
 			<button onclick="making();">
-				<h1> Making Of This website </h1>
+				<h2> Making Of This website </h2>
 				<img src="../Website Images/html.jpg">
 			</button>
 		</div>
