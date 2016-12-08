@@ -27,7 +27,9 @@ h1, h2, h3, h4, h5, h6 {
 p {
 	color: rgb(<?php echo $seasons[$season]["paragraphcolor"]; ?>);
 }
-/* Sources: http://stackoverflow.com/questions/21209840/css-how-to-stretch-and-auto-resize-background-image and http://stackoverflow.com/questions/20039765/how-to-apply-a-css-3-blur-filter-to-a-background-image */
+
+/* Start Homepage !There might be some elements from other pages!
+Sources: http://stackoverflow.com/questions/21209840/css-how-to-stretch-and-auto-resize-background-image and http://stackoverflow.com/questions/20039765/how-to-apply-a-css-3-blur-filter-to-a-background-image */
 #homepage:before {
 	content: "";
 	z-index: -1;
@@ -111,5 +113,63 @@ p {
 	left: 46%;
 	font-size: 1vmax;
 	display: none;
+}
+/* End Homepage 
+   Start ContentSelectPage !There might be some elements from other pages! */
+#contentselectpage {
+	display: inline-flex;
+	flex-flow: column nowrap;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+}
+#menubar {
+	z-index: 99;
+	margin: 0;
+	text-align: center;
+	text-shadow: 3px 4px 8px black;
+	font-weight: bold;
+	position: absolute;
+	height: 5vh;
+	width: 100%;
+	background-color: rgb(<?php echo $seasons[$season]["backgroundcolor"]; ?>);
+}
+#contenttitle {
+	background: url("../../Website Images/<?php echo $season; ?>.jpg") no-repeat center center fixed;
+	margin: 0;
+	height: 28vh;
+	text-align: center;
+	text-shadow: 3px 4px 8px black;
+	font-weight: bold;
+	filter: blur(1px);
+
+}
+#contentselectbox {
+	display: inline-flex;
+	flex-flow: row nowrap;
+	padding: 5px;
+	height: 100%;
+	position: relative;
+
+}
+#contentselectboxtitle {
+}
+#contentselectboxtitle h1{
+
+}
+#contentselectbox1, #contentselectbox2, #contentselectbox3 {
+	background-color: rgb(<?php echo $seasons[$season]["menuandbuttoncolor"]; ?>);
+	border: 5px solid rgb(<?php echo $seasons[$season]["menuandbuttoncolor"]; ?>);
+	display: inline-flex;
+	flex-flow: column wrap;
+	width: 29%;
+	margin: 0 auto 0 auto;
+	padding: 5px;
+	border-radius: 10px;
+	outline: none;
+	/* Source: http://stackoverflow.com/questions/22672368/how-to-make-a-transparent-html-button */
+	cursor: pointer;
+    background-repeat: no-repeat;
+	/* End Source */
 }
 

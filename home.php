@@ -31,6 +31,32 @@
 				<h2> Making Of This website </h2>
 				<img src="../Website Images/html.jpg">
 			</button>
-		</div>
+		</div> 
+<!--		<div id="contentselectpage">
+			<div id="menubar">
+			</div>
+			<div id="contenttitle">
+			</div>
+			<div id="contentselectbox">
+				<button id="contentselectbox1">
+					<div id="contentselectboxtitle">
+						<h1> title </h1>
+					</div>
+					<p> text </p>
+				</button>
+				<button id="contentselectbox2">
+					<div id="contentselectboxtitle">
+						<h1> title </h1>
+					</div>
+					<p> text </p>
+				</button>
+				<button id="contentselectbox3">
+					<div id="contentselectboxtitle">
+						<h1> title </h1>
+					</div>
+					<p> text </p>
+				</button>
+			</div>
+		</div>-->
 	</body>
 </html>
