@@ -1,5 +1,5 @@
 <?php	
-	$currentdate = mktime(0, 0, 0, 12, 8, date("y"));
+	$currentdate = mktime(0, 0, 0, 12, 19, date("y"));
 	#$currentdate = time();
 	if ($currentdate >= mktime(0, 0, 0, 3, 21, date("Y") ) && $currentdate < mktime(0, 0, 0, 6, 21, date("Y") )){
 		$season = "spring";

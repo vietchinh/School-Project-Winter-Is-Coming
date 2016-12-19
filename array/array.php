@@ -5,4 +5,5 @@
 		"summer" => array ("backgroundcolor"=>"65,143,88", "menuandbuttoncolor" =>"16,56,12", "headercolor"=>"68,198,88", "paragraphcolor"=>"68,198,88", "paragraphheadercolor"=>"0,255,51", "headertext"=>"Spring passes and one remembers one's innocence"),
 		"autumn" => array ("backgroundcolor"=>"227,205,161", "menuandbuttoncolor" =>"220,168,46", "headercolor"=>"205,173,146", "paragraphcolor"=>"112,82,48", "paragraphheadercolor"=>"117,82,48", "headertext"=>"Summer passes and one remembers one's exuberance"),
 	);
+
 ?>

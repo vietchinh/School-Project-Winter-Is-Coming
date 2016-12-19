@@ -1,86 +1,143 @@
 var windowheight = $(window).height();
 var windowwidth = $(window).width();
-console.log (windowheight);
-console.log (windowwidth);
+var boxh1text = [];
+var memory = [];
+var pagesave = [];
+var histories = {
+html:"PHP werd in 1994 ontwikkeld door Rasmus Lerdorf. De eerste publieke versie werd uitgegeven in 1995, alsook versie 2. Zeev Suraski en Andi Gutmans, twee Israëlische ontwikkelaars aan de Technion IIT, herschreven de parser in 1997 en vormden de basis voor PHP 3 en veranderde hiermee de naam in PHP: Hypertext Preprocessor. Het ontwikkelteam bracht PHP/FI 2 officieel in november 1997 uit, na maanden van beta-tests. Hierna begon de publieke test van PHP 3 en in juni 1998 werd PHP 3 officieel uitgebracht. Suraski en Gutmans begonnen hierna met het hersch............ ",
+htmlimg: "../Website Images/test.png",
+javascript:"lel",
+php: "this is going be a mess",
+making: "bloody hell"
+};
+var used = {
+html:"PHP wordt veel gebruikt om op webservers dynamisch webpagina's te creëren. Andere bekende server-sidescripttalen zijn Java Server Pages (JSP), ColdFusion en Active Server Pages (ASP). De code van de pagina wordt op de webserver uitgevoerd en het resultaat wordt naar de computer van de bezoeker gestuurd en in de webbrowser getoond. Dit in tegenstelling tot client-side-scripting (zoals JavaScript), waarbij de webbrowser eerst de pagina van de webserver downloadt en vervolgens zelf (op de computer van........ ",
+htmlimg: "../Website Images/test.png",
+javascript:"lel",
+php: "this is going be a mess",
+making: "bloody hell"
+};
+var syntax = {
+html:"PHP is een scripttaal en is vergelijkbaar met Perl, Python en Ruby. Qua syntaxis lijkt PHP het meest op C. In tegenstelling tot C is het in PHP (met name PHP5) mogelijk objectgeoriënteerd te programmeren, net als in bijvoorbeeld Java, C++ en C♯. Net als bij veel andere scripttalen moeten variabelen voorafgegaan worden door een dollarteken ('$'). Dit in tegenstelling tot talen als C, C++ en Java. Dit is overgenomen uit de scripttaal Perl, waarvan PHP mede is afgeleid. Naast server-side scripting kan PHP ook.................",
+htmlimg: "../Website Images/test.png",
+javascript:"lel",
+php: "this is going be a mess",
+making: "bloody hell"
+};
+
 function onload(){
-	
-	$("#homepage").children(".title").children("h1").delay(1000).fadeIn(1000, function() {
-		$("#homepage").children(".title").children("h5").fadeIn(1000, function() {
-			$("#homepage").children("button").fadeIn(1000); }); 
-		});
+	pagesave[0] = $("#homepage").html();
+	pagesave[1] = $("#contentselectpage").html();
+	$("#contentselectpage").remove();
+	$("#title").children("h1").fadeIn(700, function() {
+		$("#title").children("h5").fadeIn(800, function() {
+			$("#box-wrapper").fadeIn(900).css("display", "inline-flex"); 
+		}); 
+	});
 }
-function Test(){
-	var memory = "memory";
-	console.log (memory);
-}
-function homepagetransitionanimations(b, img){
-	/* source : http://stackoverflow.com/questions/8260156/how-do-i-create-dynamic-variable-names-inside-a-loop */
-	var boxleftposition = [];
-	var boxh1text = [];
-	for (var c = 1; c <= 4; c++){
-		boxleftposition[c] = $(".box-" + c).offset().left;
-		 boxh1text[c] = $(".box-" + c).text();
-	}
-	/* End Source */
-	for (var a = 1; a <= 4; a++) {
-		if (a == b){
-			$(".box-" + b).css("left", boxleftposition[a] ).css("margin", 0);
-		}
-		else {
-		/* source: http://stackoverflow.com/questions/5891840/how-to-use-javascript-variables-in-jquery-selectors */
-		$(".box-" + a).css("left", boxleftposition[a]).fadeOut("fast").css("margin", 0).css("position", "fixed");
-		/*End Source*/
+function homepagetransitionanimations(memory){
+	homepage = [$("#homepage").html()];
+	if (boxh1text != null){
+		for (var b = 1; b <= 4; b++){
+			boxh1text[b] = $("#box-" + b).text();
 		}
 	}
-	$(".box-" + b).css("left", boxleftposition[b]).css("margin", 0);
-	$(".box-" + b).children("button").children("h1").remove();
-	$(".box-" + b).append("<div id='contenttitle'></div>");
-	$(".box-" + b).append("<h1>" + boxh1text[b] + "</h1>").children("h1").css("top", -140);
-	$("#navigationbar").animate({
-		top: 0
-	}, "slow");
-	$(".title").fadeOut("fast");
-	$(".box-" + b).children("button").fadeOut("slow", function() {
-		$(".box-" + b).children("h1").css("top", 110).css("animation", "biggertext linear 1s forwards" );
-		$(".box-" + b).children("h1").animate({
-			top: 55
-		},"slow");
-	
-	$(".box-wrapper").animate({
-			top: $("#navigationbar").height(),
-		}, "slow").children(".box-" + b).animate({
-			margin: 0,
-			left: 0,
-			width: "100%",
-			height: 20 + "vh",
-		},"slow",function(){
-				$("#contenttitle").fadeIn("slow").css("display", "inline-block").css("background", "url('../Website Images/"+ img +"balk.png') no-repeat");
-				$(".box-" + b).children("h1").css("top", -152);
-		});
-	}) ;
+	$("body").append("<div id='contentselectpage'></div>");
+	$("#contentselectpage").append(pagesave[1]);
+		$("#titlebar").append("<h1>" + boxh1text[memory[0]] + "</h1>");
+		$("#titlebar").append("<img src='../Website Images/" + memory[1] + ".jpg'></img>");
+			$("#history").append("<img src='" + histories[memory[1] + "img"] + "'></img>");
+			$("#history").append("<p>" + histories[memory[1]] + "</p>");
+			$("#used").append("<img src='" + histories[memory[1] + "img"] + "'></img>");
+			$("#used").append("<p>" + used[memory[1]] + "</p>");
+			$("#syntax").append("<img src='" + histories[memory[1] + "img"] + "'></img>");
+			$("#syntax").append("<p>" + syntax[memory[1]] + "</p>");
+	$("#contentselectpage").fadeIn("slow", function() {
+		$("body").children("#homepage").remove();
+	});
 }
-
-function fadeout(b){
-
+function inbetweentransition(memory) {
+	$("#history").children("p").fadeOut("slow", function() {
+		$("#history").children("p").text(histories[memory[1]]);
+		$("#history").children("p").fadeIn("slow");		
+	});
+	$("#used").children("p").fadeOut("slow", function() {
+		$("#used").children("p").text(histories[memory[1]]);
+		$("#used").children("p").fadeIn("slow");		
+	});
+	$("#syntax").children("p").fadeOut("slow", function() {
+		$("#syntax").children("p").text(histories[memory[1]]);
+		$("#syntax").children("p").fadeIn("slow");		
+	});
+}
+function home(){
+	$("body").append("<div id='homepage'></div>");
+	$("#homepage").append(homepage[0]);
+	$("#contentselectpage").fadeOut("slow", function () {
+		$("body").children("#contentselectpage").remove();
+	});
 }
 function htmlcss(){
-	var b = 1;
-	var img = "html";
-	homepagetransitionanimations(b, img);
-	
+	if($("#contentselectpage").length == 0) {
+		memory[0] = 1;
+		memory[1] = "html";
+		homepagetransitionanimations(memory);
+	}
+	else {
+		if (memory[0] == "html") {	
+		}
+		else {
+			memory[0] = 1;
+			memory[1] = "html";
+			inbetweentransition(memory);	
+		}
+	}
 }
 function javascript(){
-	var b = 2;
-	var img = "javascript";
-	homepagetransitionanimations(b, img);
+	if($("#contentselectpage").length == 0) {
+		memory[0] = 2;
+		memory[1] = "javascript";
+		homepagetransitionanimations(memory);
+	}
+	else {
+		if (memory[0] == "javascript") {
+		}
+		else {
+			memory[0] = 2;
+			memory[1] = "javascript";
+			inbetweentransition(memory);	
+		}
+	}
 }
 function php(){
-	var b = 3;
-	var img = "php";
-	homepagetransitionanimations(b, img);
+	if($("#contentselectpage").length == 0) {
+		memory[0] = 3;
+		memory[1] = "php";
+		homepagetransitionanimations(memory);
+	}
+	else {
+		if (memory[0] == "javascript") {
+		}
+		else {
+			memory[0] = 3;
+			memory[1] = "php";
+			inbetweentransition(memory);	
+		}
+	}
 }
 function making(){
-	var b = 4;
-	var img = "making";
-	homepagetransitionanimations(b, img);
+	if($("#contentselectpage").length == 0) {
+		memory[0] = 4;
+		memory[1] = "making";
+		homepagetransitionanimations(memory);
+	}
+	else {
+		if (memory[0] == "javascript") {	
+		}
+		else {
+			memory[0] = 4;
+			memory[1] = "making";
+			inbetweentransition(memory);	
+		}
+	}
 }
